@@ -1,10 +1,16 @@
 Gruppe 6 (Ghost Busters)
-Name of the project (replace with the name)
-Project Description
-If you take the "easy one" or "A 'Krak' insprired project" you can leave this out
 
-Group Contract
-Add a short informal Group Contract, agreed upon by ALL MEMBERS in the group
+The easy one
+
+Group Contract:
+Vore erfaring med gruppearbejde er, at vi kan blive bedre til at strukturere vores tid. 
+Dvs. vi skal ikke gemme opgaver til sidste øjeblik og vores kommunikation vedr. hvornår deltagerne er disponible, skal være mere tydelig.
+Vi skal overholde vores aftaler og på forhånd tydeliggøre for de øvrige medlemmer hvilke dage og tidspunkter, vi  er disponible. 
+På forhånd udarbejde tydelige plan for hvilke dage der skal arbejdes – i hele projektperioden.
+Som udgangspunkt skal vi møde fysisk hvis det kan lade sig gøre; hvis man har tid og mulighed.
+Fra projektets start skal vi have defineret klare opgaver. Projektdeltagere vælger opgaver fra Jira.
+Afslutningsvis giver gruppen udtryk for at sætte pris på gruppens sociale og faglige sammenhold, samt en kultur præget af en høj grad af hjælpsomhed og lyst til faglig udvikling. 
+ 
 
 Branching Strategy:
 Feature Branching
@@ -22,3 +28,4 @@ Kevin Funch
 Jonas Munk
 
 Lars Brogaard Kaiser
+Oprettet GitHub repo og updatet README
