@@ -6,8 +6,8 @@ If you take the "easy one" or "A 'Krak' insprired project" you can leave this ou
 Group Contract
 Add a short informal Group Contract, agreed upon by ALL MEMBERS in the group
 
-Branching Strategy
-Add the name of your selected Branching Strategy
+Branching Strategy:
+Feature Branching
 
 Link to deployed project
 Add a link (when ready) to your deployed project
