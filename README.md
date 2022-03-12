@@ -1,6 +1,6 @@
 Gruppe 6 (Ghost Busters)
 
-The easy one
+The easy one (Library)
 
 Group Contract:
 Vore erfaring med gruppearbejde er, at vi kan blive bedre til at strukturere vores tid. 
@@ -15,8 +15,12 @@ Afslutningsvis giver gruppen udtryk for at sætte pris på gruppens sociale og f
 Branching Strategy:
 Feature Branching
 
-Link to deployed project
+Link to deployed project:
 Add a link (when ready) to your deployed project
+
+Mini-sprint 1 (Deadline 15/3):
+
+
 
 Who Did What
 Each member must come up with a short description when the final deadline is reached. Initially, Each of you should push a commit with just your name You should all add your GitHub usename in parenthesis next to your name, so I know who is who, when I check commit messages
