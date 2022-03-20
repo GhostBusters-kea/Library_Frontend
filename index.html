@@ -23,24 +23,25 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="navbar">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Frontpage</a>
+                    <a id="front-page" class="nav-link active" aria-current="page" href="#">Frontpage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Loan</a>
+                    <a id="loan-page" class="nav-link" href="#">Loan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Reservation</a>
+                    <a id="reservation-page" class="nav-link" href="#">Reservation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Books</a>
+                    <a id="book-page" class="nav-link" href="#">Books</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a id="login-page" class="nav-link" href="#">Login</a>
                 </li>
             </ul>
         </div>
+        <div id="content"></div>
     </div>
 </nav>
 
@@ -51,3 +52,19 @@
   Templates
 -->
 
+
+<template data-id="front-page">
+    <h2>Welcome to our Library</h2>
+</template>
+<template data-id="loan-page">
+    <h2>Loan page</h2>
+</template>
+<template data-id="reservation-page">
+    <h2>Reservation page</h2>
+</template>
+<template data-id="book-page">
+    <h2>Book page</h2>
+</template>
+<template data-id="login-page">
+    <h2>Login page</h2>
+</template>
