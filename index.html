@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
 
     <script type="module" src="index.js"></script>
-</head>
+  </head>
 
-<!--
+  <!--
   Navbar
 -->
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
         <a class="navbar-brand" href="#">Library</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" id="navbar">
-                <li class="nav-item">
-                    <a id="front-page" class="nav-link active" aria-current="page" href="#">Frontpage</a>
-                </li>
-                <li class="nav-item">
-                    <a id="loan-page" class="nav-link" href="#">Loan</a>
-                </li>
-                <li class="nav-item">
-                    <a id="reservation-page" class="nav-link" href="#">Reservation</a>
-                </li>
-                <li class="nav-item">
-                    <a id="book-page" class="nav-link" href="#">Books</a>
-                </li>
-                <li class="nav-item">
-                    <a id="login-page" class="nav-link" href="#">Login</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav mx-auto" id="navbar">
+            <li class="nav-item">
+              <a
+                id="front-page"
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                >Frontpage</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="loan-page" class="nav-link" href="#">Loans</a>
+            </li>
+            <li class="nav-item">
+              <a id="reservation-page" class="nav-link" href="#"
+                >Reservations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a id="book-page" class="nav-link" href="#">Books</a>
+            </li>
+            <li class="nav-item">
+              <a id="library-page" class="nav-link" href="#">Libraries</a>
+            </li>
+            <li class="nav-item">
+              <a id="login-page" class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
         </div>
         <div id="content"></div>
-    </div>
-</nav>
-
-</body>
+      </div>
+    </nav>
+  </body>
 </html>
 
 <!--
   Templates
 -->
 
-
 <template data-id="front-page">
-    <h2>Welcome to our Library</h2>
+  <h2>Welcome to our Library</h2>
 </template>
 <template data-id="loan-page">
-    <h2>Loan page</h2>
+  <h2>Loan page</h2>
 </template>
 <template data-id="reservation-page">
-    <h2>Reservation page</h2>
+  <h2>Reservation page</h2>
 </template>
 <template data-id="book-page">
-    <h2>Book page</h2>
+  <h2>Book page</h2>
+</template>
+<template data-id="library-page">
+  <h2>Library page</h2>
 </template>
 <template data-id="login-page">
-    <h2>Login page</h2>
+  <h2>Login page</h2>
 </template>
