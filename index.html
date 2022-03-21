@@ -17,6 +17,15 @@
     ></script>
 
     <script type="module" src="index.js"></script>
+    <style>
+        .myBox{
+            border-style: solid;
+            padding: 1em;
+            height: 300px;
+            margin-right: 1em;
+
+        }
+    </style>
   </head>
 
   <!--
@@ -90,9 +99,40 @@
   <h2>Book page</h2>
 </template>
 
-<!-- Library-->
+<!-- Library page-->
 <template data-id="library-page">
   <h2>Library page</h2>
+
+  <div style="display: flex">
+    <div class="myBox">
+      <h3>Get single library</h3>
+      <input id="input-id" />
+      <button id="btn-get-library" type="button" class="btn btn-primary">
+        Get Library
+      </button>
+      <p>Library ID <span id="id-library-id"></span></p>
+      <p>Library Name <span id="id-name"></span></p>
+      
+    </div>
+    <div class="myBox" style="width: 70%; height: 400px; overflow-y: scroll">
+      <h3>Get all libraries</h3>
+      <button type="button" class="btn btn-primary" id="btn-get-all-libraries">
+        Get all libraries
+      </button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Library Id</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-id"></tbody>
+      </table>
+    </div>
+  </div>
+
+
+
 </template>
 <template data-id="login-page">
   <h2>Login page</h2>
