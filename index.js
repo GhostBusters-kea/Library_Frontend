@@ -11,3 +11,6 @@ function renderNavItems(evt){
         }
     }
 }
+
+document.getElementById("navbar").onclick= renderNavItems;
+showPage("front-page")
