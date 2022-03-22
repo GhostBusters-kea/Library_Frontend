@@ -94,6 +94,7 @@
 <!-- Loan -->
 <template data-id="loan-page">
   <h2>Loan page</h2>
+  <!--- find loan -->
   <div>
     <table class="table">
       <input id="input-loan-id"><button id="btn-get-loan">Get member</button>
@@ -105,6 +106,30 @@
       </thead>
       <tbody id="tbl-loan-id"></tbody>
     </table>
+  </div>
+
+  <!--- create loan -->
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col md-6">
+        <h3>Add a new loan</h3>
+        <form class="add-post-form">
+          <div class="form-group">
+            <label for="username">username</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="form-group">
+            <label for="due-date">dueDate</label>
+            <input type="date" class="form-control" id="due-date">
+          </div>
+          <div class="form-group">
+            <label for="returned-date">returnedDate</label>
+            <input type="date" class="form-control" id="returned-date">
+          </div>
+          <button type="submit" class="btn btn-primary">add username</button>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 
