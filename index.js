@@ -1,5 +1,5 @@
-import { renderTemplate, setActive, showPage } from "./utils.js"
-
+import { renderTemplate, setActive, showPage } from "./utils.js";
+import {getLoanOnClick} from "./js-for-pages/loan.js";
 function renderNavItems(evt){
     const element = evt.target
     setActive(element)
@@ -7,6 +7,10 @@ function renderNavItems(evt){
     renderTemplate(id)
     switch (id){
         case "front-page": {
+            break
+        }
+        case "loan-page":{
+            getLoanOnClick()
             break
         }
     }
