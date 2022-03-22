@@ -18,7 +18,6 @@ showPage("front-page")
 
 // Library page
 //document.getElementById("btn-get-library").onclick = getLibrary;
-
 document.getElementById("btn-get-all-libraries").onclick = getAllLibraries;
 
 function getAllLibraries(){

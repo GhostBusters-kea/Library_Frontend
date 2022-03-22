@@ -1,6 +1,7 @@
 // https://localhost:8080/api/libraries
 
-document.getElementById("btn-get-library").onclick = getLibrary;
+//document.getElementById("btn-get-library").onclick = getLibrary;
+/*
 document.getElementById("btn-get-all-libraries").onclick = getAllLibraries;
 
 function getAllLibraries(){
@@ -21,3 +22,4 @@ function getAllLibraries(){
     .catch(err => console.log("OOOPPs: " + err))
     .finally(err => console.log("Done"))
 }
+*/
