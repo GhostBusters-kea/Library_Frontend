@@ -18,6 +18,10 @@ function getAllBooks(){
         <tr>
             <td>${u.id}</td>
             <td>${u.title}</td>
+            <td>${u.authors}</td>
+            <td>${u.publisher}</td>
+            <td>${u.publishYear}</td> 
+            <td>${u.isbnNumber}</td> 
         </tr>    
         `).join("\n")
             document.getElementById("tbl-id-book").innerHTML=rows;
