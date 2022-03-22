@@ -108,8 +108,31 @@
   </div>
 </template>
 
+
+<!-- Reservation Page-->
+
 <template data-id="reservation-page">
   <h2>Reservation page</h2>
+  <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll">
+    
+    <h3>Get all libraries</h3>
+    <button id="btn-get-all-reservations" type="button" class="btn btn-primary" >
+      Get all libraries
+    </button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Library Id</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody id="tbl-id-reservation"></tbody>
+    </table>
+  </div>
+
+
+
+
 </template>
 <template data-id="book-page">
   <h2>Book page</h2>
@@ -121,16 +144,15 @@
   <div style="display: flex">
     <div class="myBox">
       <h3>Get single library</h3>
-      <input id="input-id" />
+      <input id="input-id-library" />
       <button id="btn-get-library" type="button" class="btn btn-primary">
         Get Library
       </button>
       <p>Library ID <span id="id-library-id"></span></p>
-      <p>Library Name <span id="id-name"></span></p>
+      <p>Library Name <span id="id-library-name"></span></p>
       
     </div>
     <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll">
-      <script type="module" src="index.js"></script>
       <h3>Get all libraries</h3>
       <button id="btn-get-all-libraries" type="button" class="btn btn-primary" >
         Get all libraries
