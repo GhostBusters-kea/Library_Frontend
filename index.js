@@ -28,7 +28,10 @@ showPage("front-page")
 // Library page
 //document.getElementById("btn-get-library").onclick = getLibrary;
 
+
+//document.getElementById("btn-get-all-libraries").onclick = getAllLibraries;
 /*document.getElementById("btn-get-all-libraries").onclick = getAllLibraries;
+
 
 function getAllLibraries(){
     fetch("http://localhost:8080/api/libraries")
@@ -49,3 +52,4 @@ function getAllLibraries(){
     .finally(err => console.log("Done"))
 }
 */
+

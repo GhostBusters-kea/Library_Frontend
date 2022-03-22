@@ -95,10 +95,16 @@
 <template data-id="loan-page">
   <h2>Loan page</h2>
   <div>
-    <input id="input-id"><button id="btn-get">Get member</button>
-    <p>Username: <span id="id-username"></span></p>
-    <p>CheckoutDate: <span id="id-checkoutdate"></span></p>
-    <p id="error"></p>
+    <table class="table">
+      <input id="input-loan-id"><button id="btn-get-loan">Get member</button>
+      <thead>
+      <tr>
+        <th>Checkoutdate</th>
+        <th>Username</th>
+      </tr>
+      </thead>
+      <tbody id="tbl-loan-id"></tbody>
+    </table>
   </div>
 </template>
 
