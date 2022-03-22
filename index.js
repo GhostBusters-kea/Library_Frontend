@@ -1,5 +1,5 @@
 import { renderTemplate, setActive, showPage } from "./utils.js";
-import {getLoanOnClick} from "../js-for-pages/loan.js";
+import {getLoanOnClick, createNewLoan} from "../js-for-pages/loan.js";
 import {setupLibraryHandlers} from "../js-for-pages/library.js"
 function renderNavItems(evt){
     const element = evt.target
@@ -16,6 +16,7 @@ function renderNavItems(evt){
         }
         case "loan-page":{
             getLoanOnClick()
+            createNewLoan()
             break
         }
     }
