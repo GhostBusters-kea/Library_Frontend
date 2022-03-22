@@ -1,6 +1,7 @@
 import { renderTemplate, setActive, showPage } from "./utils.js";
 import {getLoanOnClick} from "../js-for-pages/loan.js";
 import {setupLibraryHandlers} from "../js-for-pages/library.js"
+import {setupBookHandlers} from "../js-for-pages/book.js";
 function renderNavItems(evt){
     const element = evt.target
     setActive(element)
@@ -16,6 +17,10 @@ function renderNavItems(evt){
         }
         case "loan-page":{
             getLoanOnClick()
+            break
+        }
+        case "book-page":{
+            setupBookHandlers()
             break
         }
     }

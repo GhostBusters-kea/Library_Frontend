@@ -134,8 +134,36 @@
 
 
 </template>
+
 <template data-id="book-page">
   <h2>Book page</h2>
+  <div style="display: flex">
+    <div class="myBox">
+      <h3>Get single book</h3>
+      <input id="input-id-book" />
+      <button id="btn-get-book" type="button" class="btn btn-primary">
+        Get Book
+      </button>
+      <p>Book ID <span id="id-book-id"></span></p>
+      <p>Book Name <span id="id-book-title"></span></p>
+
+    </div>
+    <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll">
+      <h3>Get all books</h3>
+      <button id="btn-get-all-books" type="button" class="btn btn-primary" >
+        Get all books
+      </button>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Book Id</th>
+          <th>Title</th>
+        </tr>
+        </thead>
+        <tbody id="tbl-id-book"></tbody>
+      </table>
+    </div>
+  </div>
 </template>
 
 <!-- Library page-->
@@ -170,6 +198,8 @@
   </div>
 
 </template>
+
+
 <template data-id="login-page">
   <h2>Login page</h2>
 </template>
