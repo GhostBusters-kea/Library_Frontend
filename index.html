@@ -17,6 +17,7 @@
     ></script>
 
     <script type="module" src="index.js"></script>
+    
     <style>
         .myBox{
             border-style: solid;
@@ -26,6 +27,7 @@
 
         }
     </style>
+
   </head>
 
   <!--
@@ -89,9 +91,18 @@
 <template data-id="front-page">
   <h2>Welcome to our Library</h2>
 </template>
+
+<!-- Loan -->
 <template data-id="loan-page">
   <h2>Loan page</h2>
+  <div>
+    <input id="input-id"><button id="btn-get">Get member</button>
+    <p>Username: <span id="id-username"></span></p>
+    <p>CheckoutDate: <span id="id-checkoutdate"></span></p>
+    <p id="error"></p>
+  </div>
 </template>
+
 <template data-id="reservation-page">
   <h2>Reservation page</h2>
 </template>
