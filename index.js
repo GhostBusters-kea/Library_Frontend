@@ -1,5 +1,6 @@
 import { renderTemplate, setActive, showPage } from "./utils.js";
-import {getLoanOnClick} from "./js-for-pages/loan.js";
+import {getLoanOnClick} from "../js-for-pages/loan.js";
+import {setupLibraryHandlers} from "../js-for-pages/library.js"
 function renderNavItems(evt){
     const element = evt.target
     setActive(element)
@@ -7,6 +8,10 @@ function renderNavItems(evt){
     renderTemplate(id)
     switch (id){
         case "front-page": {
+            break
+        }
+        case "library-page":{
+            setupLibraryHandlers()
             break
         }
         case "loan-page":{
@@ -22,13 +27,14 @@ showPage("front-page")
 
 // Library page
 //document.getElementById("btn-get-library").onclick = getLibrary;
-document.getElementById("btn-get-all-libraries").onclick = getAllLibraries;
+
+/*document.getElementById("btn-get-all-libraries").onclick = getAllLibraries;
 
 function getAllLibraries(){
     fetch("http://localhost:8080/api/libraries")
     .then(res => res.json())
     .then(data => {
-        console-log(data)
+        console.log(data)
         const rows = data.map(u=>
         `
         <tr>
@@ -42,3 +48,4 @@ function getAllLibraries(){
     .catch(err => console.log("OOOPPs: " + err))
     .finally(err => console.log("Done"))
 }
+*/
