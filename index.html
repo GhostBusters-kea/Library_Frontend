@@ -15,7 +15,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
     <script type="module" src="index.js"></script>
     
     <style>
@@ -119,7 +118,6 @@
 <!-- Library page-->
 <template data-id="library-page">
   <h2>Library page</h2>
-
   <div style="display: flex">
     <div class="myBox">
       <h3>Get single library</h3>
@@ -131,9 +129,10 @@
       <p>Library Name <span id="id-name"></span></p>
       
     </div>
-    <div class="myBox" style="width: 70%; height: 400px; overflow-y: scroll">
+    <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll">
+      <script type="module" src="index.js"></script>
       <h3>Get all libraries</h3>
-      <button type="button" class="btn btn-primary" id="btn-get-all-libraries">
+      <button id="btn-get-all-libraries" type="button" class="btn btn-primary" >
         Get all libraries
       </button>
       <table class="table">
@@ -148,9 +147,8 @@
     </div>
   </div>
 
-
-
 </template>
 <template data-id="login-page">
   <h2>Login page</h2>
 </template>
+
