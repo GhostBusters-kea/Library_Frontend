@@ -6,6 +6,7 @@
 export function setupBookHandlers(){
     document.getElementById("btn-get-all-books").onclick = getAllBooks;
     document.getElementById("btn-get-book").onclick = getBook();
+    document.getElementById("btn-create-book").onclick = createNewBook();
 }
 
 function getAllBooks(){
@@ -30,6 +31,39 @@ function getAllBooks(){
         .catch(err => console.log("OOOPPs: " + err))
         .finally(err => console.log("Done"))
 }
+
+ function createNewBook(){
+    const addPostForm = document.querySelector(".add-post-form")
+    const titleValue = document.getElementById("title")
+    const authorValue = document.getElementById("author")
+    const publisherValue = document.getElementById("publisher")
+    const publisherYearValue = document.getElementById("publishYear")
+    const isbn = document.getElementById("isbn")
+    const url = "http://localhost:8080/api/book/"
+    addPostForm.addEventListener("submit", (e) =>{
+        e.preventDefault();
+
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title: titleValue.value,
+                author: authorValue.value,
+                publisher: publisherValue.value,
+                publishYear: publisherYearValue.value,
+                isbn: isbn.value
+            })
+        })
+            .then(res => res.json())
+            .then(data=> {
+                const dataArr = [];
+                dataArr.push(data);
+            })
+    })
+}
+
 
 
 function getBook() {
