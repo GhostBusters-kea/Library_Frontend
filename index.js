@@ -1,6 +1,8 @@
 import { renderTemplate, setActive, showPage } from "./utils.js";
 import {getLoanOnClick, createNewLoan} from "../js-for-pages/loan.js";
 import {setupLibraryHandlers} from "../js-for-pages/library.js"
+import { createNewUser, fetchLoginInfo} from "./js-for-pages/member.js";
+
 function renderNavItems(evt){
     const element = evt.target
     setActive(element)
@@ -17,6 +19,14 @@ function renderNavItems(evt){
         case "loan-page":{
             getLoanOnClick()
             createNewLoan()
+            break
+        }
+        case "login-page":{
+            let loginInfo = fetchLoginInfo()
+            break
+        }
+        case "signup-page":{
+            createNewUser()
             break
         }
     }
