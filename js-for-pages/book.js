@@ -17,10 +17,14 @@ function getAllBooks(){
                 `
         <tr>
             <td>${u.id}</td>
-            <td>${u.name}</td>
+            <td>${u.title}</td>
+            <td>${u.authors}</td>
+            <td>${u.publisher}</td>
+            <td>${u.publishYear}</td> 
+            <td>${u.isbnNumber}</td> 
         </tr>    
         `).join("\n")
-            document.getElementById("tbl-id").innerHTML=rows;
+            document.getElementById("tbl-id-book").innerHTML=rows;
         })
 
         .catch(err => console.log("OOOPPs: " + err))
@@ -36,7 +40,7 @@ function getBook() {
         .then(res => res.json())
         .then(data => {
                 document.getElementById("id-book-id").innerText = data.id
-                document.getElementById("id-book-name").innerText = data.name
+                document.getElementById("id-book-title").innerText = data.title
 
             }
         )
