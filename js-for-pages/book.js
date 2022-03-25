@@ -1,5 +1,7 @@
 // https://localhost:8080/api/books
 
+import { SERVER } from "../settings.js"
+const URL = SERVER + "books/"
 
 
 
@@ -10,7 +12,7 @@ export function setupBookHandlers(){
 }
 
 function getAllBooks(){
-    fetch("http://localhost:8080/api/books/")
+    fetch(URL)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -39,11 +41,11 @@ function getAllBooks(){
     const publisherValue = document.getElementById("publisher")
     const publisherYearValue = document.getElementById("publishYear")
     const isbn = document.getElementById("isbn")
-    const url = "http://localhost:8080/api/book/"
+    // const url = "http://localhost:8080/api/book/"
     addPostForm.addEventListener("submit", (e) =>{
         e.preventDefault();
 
-        fetch(url, {
+        fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -70,7 +72,7 @@ function getBook() {
 
     const id = document.getElementById("input-id-book").value
 
-    fetch("http://localhost:8080/api/books/"+id)
+    fetch(URL+id)
         .then(res => res.json())
         .then(data => {
                 document.getElementById("id-book-id").innerText = data.id

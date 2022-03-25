@@ -1,4 +1,5 @@
-
+import { SERVER } from "../settings.js"
+const URL = SERVER + "members"
 
 export function createNewUser(){
     const addPostForm = document.querySelector(".add-user-form")
@@ -10,11 +11,11 @@ export function createNewUser(){
     const streetValue = document.getElementById("street")
     const cityValue = document.getElementById("city")
     const zipValue = document.getElementById("zip")
-    const url = "http://localhost:8080/api/members/"
+    // const url = "http://localhost:8080/api/members/"
     addPostForm.addEventListener("submit", (e) =>{
         e.preventDefault();
 
-        fetch(url, {
+        fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,12 +43,12 @@ export function fetchLoginInfo(){
     const loginPostForm = document.querySelector(".login-post-form")
     const loginUsernameValue = document.getElementById("login-username")
     const loginPasswordValue = document.getElementById("login-password")
-    const url = "http://localhost:8080/api/members/"
+    // const url = "http://localhost:8080/api/members/"
     const dataArr = [];
     loginPostForm.addEventListener("submit", (e) =>{
         e.preventDefault();
 
-        fetch(url, {
+        fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

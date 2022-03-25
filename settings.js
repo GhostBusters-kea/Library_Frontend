@@ -1,0 +1,1 @@
+export const SERVER = "https://kealibrary.azurewebsites.net/api/"

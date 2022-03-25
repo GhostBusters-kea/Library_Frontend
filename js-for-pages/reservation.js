@@ -1,10 +1,15 @@
+// "http://localhost:8080/api/reservations/"
+
+import { SERVER } from "../settings.js"
+const URL = SERVER + "reservations/"
+
 export function setupReservationHandlers(){
     document.getElementById("btn-get-all-reservations").onclick = getReservations;
     document.getElementById("btn-get-library").onclick = getLibrary;
 }
 
 function getReservations(){
-    fetch("http://localhost:8080/api/reservations/")
+    fetch(URL)
     .then(res => res.json())
     .then(data => {
         console.log(data)

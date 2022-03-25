@@ -1,3 +1,8 @@
+// "http://localhost:8080/api/loan/"
+
+import { SERVER } from "../settings.js"
+const URL = SERVER + "loan/"
+
 export function getLoanOnClick(){
     document.getElementById("btn-get-loan").onclick = getAllMembers
 }
@@ -7,7 +12,7 @@ export function getLoanOnClick(){
 //Get members on loan
 function getAllMembers(){
     const username = document.getElementById("input-loan-id").value
-    fetch("http://localhost:8080/api/loan/" + username)
+    fetch(URL + username)
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
@@ -33,11 +38,11 @@ export function createNewLoan(){
     const usernameValue = document.getElementById("username")
     const dueDateValue = document.getElementById("due-date")
     const returnedDateValue = document.getElementById("returned-date")
-    const url = "http://localhost:8080/api/loan/"
+    // const url = "http://localhost:8080/api/loan/"
     addPostForm.addEventListener("submit", (e) =>{
         e.preventDefault();
 
-        fetch(url, {
+        fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -1,5 +1,7 @@
 // https://localhost:8080/api/libraries
 
+import { SERVER } from "../settings.js"
+const URL = SERVER + "libraries/"
 
 
 
@@ -9,7 +11,7 @@ export function setupLibraryHandlers(){
 }
 
 function getAllLibraries(){
-        fetch("http://localhost:8080/api/libraries/")
+        fetch(URL)
     .then(res => res.json())
     .then(data => {
         console.log(data)
@@ -32,7 +34,7 @@ function getLibrary() {
 
     const id = document.getElementById("input-id-library").value
 
-    fetch("http://localhost:8080/api/libraries/"+id)
+    fetch(URL+id)
 .then(res => res.json())
   .then(data => {
       document.getElementById("id-library-id").innerText = data.id
