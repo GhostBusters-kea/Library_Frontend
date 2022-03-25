@@ -13,11 +13,15 @@ function getAllMembers(){
             console.log(data)
             const rows = data.map(u=>
                 `
-            <tr>
-                <td>${u.memberResponse.username}</td>
+            <tr data-id=${u.id}>
+                <td>${u.id}</td>
+                <td class="td-username">${u.memberResponse.username}</td>
+                <td class="td-book">${u.bookId}</td>
                 <td>${u.checkoutdate}</td>
-                <td>${u.duedate}</td>
-                <td>${u.returneddate}</td>
+                <td class="td-duedate">${u.duedate}</td>
+                <td class="td-returneddate">${u.returneddate}</td>
+                <td><button id="delete-loan-btn" class="btn btn-primary">Delete Loan</button></td>
+                <td><button id="edit-loan-btn" class="btn-edit btn-primary">Edit Loan</button></td>
                 
             </tr>`).join("\n")
             document.getElementById("tbl-loan-id").innerHTML=rows;
@@ -53,5 +57,65 @@ export function createNewLoan(){
                 const dataArr = [];
                 dataArr.push(data);
             })
+        //reset
+        usernameValue.value = ""
+        dueDateValue.value = ""
+        returnedDateValue.value = ""
+
+
     })
 }
+
+export function deleteLoan(){
+    const usernameValue = document.getElementById("username")
+    const bookValue = document.getElementById("book")
+    const dueDateValue = document.getElementById("due-date")
+    const returneddateValue = document.getElementById("returned-date")
+
+    const addPostForm = document.querySelector(".loan-tr")
+    addPostForm.addEventListener("click", (e)=> {
+        e.preventDefault();
+        let deleteButtonPressed = e.target.id == "delete-loan-btn"
+        let editButtonPressed = e.target.id == "edit-loan-btn"
+        let id = e.target.parentElement.parentElement.dataset.id;
+
+
+        if (deleteButtonPressed) {
+            fetch("http://localhost:8080/api/loan/" + id, {
+                method: "DELETE",
+            })
+                .then(res => res.json())
+                .then(()=> location.reload())
+        }
+        if(editButtonPressed){
+            const parent = e.target.parentElement.parentElement;
+            let usernameContent = parent.querySelector(".td-username").textContent;
+            let book = parent.querySelector(".td-book").textContent;
+            let dueDateContent = parent.querySelector(".td-duedate").textContent;
+            let returnedDateContent = parent.querySelector(".td-returneddate").textContent;
+            usernameValue.value = usernameContent
+        }
+        const btn = document.querySelector(".btn-buttom")
+        btn.addEventListener("click", (e)=>{
+            e.preventDefault()
+            fetch("http://localhost:8080/api/loan/" + id, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: usernameValue.value
+                })
+            })
+                .then(res => res.json())
+                .then(()=> location.reload())
+
+        })
+
+
+
+
+
+    })
+}
+

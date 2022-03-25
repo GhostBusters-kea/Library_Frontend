@@ -102,16 +102,20 @@
   <!--- find loan -->
   <div>
     <table class="table">
-      <input id="input-loan-id"><button id="btn-get-loan">Get member</button>
+      <input id="input-loan-id" placeholder="Enter username"><button id="btn-get-loan" class="btn btn-primary">Get loan</button>
       <thead>
       <tr>
+        <th>LoanId</th>
         <th>Username</th>
+        <th>BookId</th>
         <th>Checkoutdate</th>
         <th>DueDate</th>
         <th>ReturnedDay</th>
+        <th>Delete Loan</th>
+        <th>Edit loan</th>
       </tr>
       </thead>
-      <tbody id="tbl-loan-id"></tbody>
+      <tbody id="tbl-loan-id" class="loan-tr"></tbody>
     </table>
   </div>
 
@@ -133,7 +137,7 @@
             <label for="returned-date">returnedDate</label>
             <input type="date" class="form-control" id="returned-date">
           </div>
-          <button type="submit" class="btn btn-primary">add username</button>
+          <button type="submit" class="btn-buttom btn-primary">add loan</button>
         </form>
       </div>
     </div>

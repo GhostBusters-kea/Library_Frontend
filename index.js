@@ -1,5 +1,5 @@
 import { renderTemplate, setActive, showPage } from "./utils.js";
-import {getLoanOnClick, createNewLoan} from "../js-for-pages/loan.js";
+import {getLoanOnClick, createNewLoan, deleteLoan} from "../js-for-pages/loan.js";
 import {setupLibraryHandlers} from "../js-for-pages/library.js"
 import { createNewUser, fetchLoginInfo} from "./js-for-pages/member.js";
 import {setupBookHandlers} from "../js-for-pages/book.js";
@@ -20,6 +20,7 @@ function renderNavItems(evt){
         case "loan-page":{
             getLoanOnClick()
             createNewLoan()
+            deleteLoan()
             break
         }
         case "login-page":{
