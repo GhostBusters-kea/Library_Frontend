@@ -21,7 +21,7 @@ Afslutningsvis giver gruppen udtryk for at sætte pris på gruppens sociale og f
 Feature Branching
 
 ### Link to deployed project:
-https://kealibrary.azurewebsites.net
+https://gray-smoke-0cdf54803.1.azurestaticapps.net/#
 
 ### Mini-sprint 1:
 * Entities for Book, Library, Loan, Member og Reservation
