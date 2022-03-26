@@ -51,4 +51,5 @@ Each member must come up with a short description when the final deadline is rea
 
 ##### Lars Brogaard Kaiser ([@mrbrogaardkaiser](https://github.com/mrbrogaardkaiser))
 * Oprettet GitHub repo og updatet README
-* Backend-kode relateret til "Library"
+* Backend-kode relateret til "Library" og "Reservation"
+* Frontend-kode relateret til "Library og "Reservation"
