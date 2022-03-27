@@ -1,5 +1,5 @@
-import { SERVER } from "../settings.js"
-const URL = SERVER + "members"
+//import { SERVER } from "../settings.js"
+const URL = "https://kealibrary.azurewebsites.net/api/members/"
 
 export function createNewUser(){
     const addPostForm = document.querySelector(".add-user-form")

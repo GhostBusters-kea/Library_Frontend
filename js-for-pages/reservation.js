@@ -1,7 +1,7 @@
 // "http://localhost:8080/api/reservations/"
 
-import { SERVER } from "../settings.js"
-const URL = SERVER + "reservations/"
+//import { SERVER } from "../settings.js"
+const URL = "https://kealibrary.azurewebsites.net/api/reservations/"
 
 export function setupReservationHandlers(){
     document.getElementById("btn-get-all-reservations").onclick = getReservations;

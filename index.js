@@ -33,6 +33,8 @@ function renderNavItems(evt){
         case "book-page":{
             setupBookHandlers()
 
+
+
             break
         }
     }
