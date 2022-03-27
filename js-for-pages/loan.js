@@ -1,7 +1,7 @@
 // "http://localhost:8080/api/loan/"
 
-import { SERVER } from "../settings.js"
-const URL = SERVER + "loan/"
+//import { SERVER } from "../settings.js"
+const URL = "https://kealibrary.azurewebsites.net/api/loans/"
 
 export function getLoanOnClick(){
     document.getElementById("btn-get-loan").onclick = getAllMembers

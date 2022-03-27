@@ -16,7 +16,8 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="index.js"></script>
-    
+
+
     <style>
         .myBox{
             border-style: solid;
@@ -168,26 +169,17 @@
 
 
 
-
+  <!-- Book Page-->
 </template>
 
 <template data-id="book-page">
   <h2>Book page</h2>
   <div style="display: flex">
-    <div class="myBox">
+    <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll" >
       <h3>Get single book</h3>
       <input id="input-id-book" />
       <button id="btn-get-book" type="button" class="btn btn-primary">
         Get Book
-      </button>
-      <p>Book ID <span id="id-book-id"></span></p>
-      <p>Book Name <span id="id-book-title"></span></p>
-
-    </div>
-    <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll">
-      <h3>Get all books</h3>
-      <button id="btn-get-all-books" type="button" class="btn btn-primary" >
-        Get all books
       </button>
       <table class="table">
         <thead>
@@ -199,13 +191,57 @@
           <th>Publish Year</th>
           <th>ISBN#</th>
         </tr>
-        </thead>
-        <tbody id="tbl-id-book"></tbody>
-      </table>
-    </div>
-  </div>
+        <tr class="book-tr" data-id=${data.id}>
+          <td id="id-book-id" class=".td-id"></td>
+          <td id="id-book-title" class=".td-title"></td>
+          <td id="id-book-author" class=".td-author"></td>
+          <td id="id-book-publisher" class=".td-publisher"></td>
+          <td id="id-book-publish-year" class=".td-publish-year"></td>
+          <td id="id-book-isbn" class=".td-isbn"></td>
+          <td><button id="delete-book-btn" class="btn-delete btn-primary">Delete Book</button></td>
+            <!--
+                        <form>
+                          <p id="book-id"></p>
+                          <input id="input-title" placeholder="Edit title" />
+                          <input id="input-authors" placeholder="Edit authors" />
+                          <input  id="input-publisher" placeholder="Edit publisher" />
+                          <input  id="input-publisherYear" placeholder="Edit publish year" />
+                          <input  id="input-isbnNumber" placeholder="Edit ISBN#" />
+                        </form>
+                        <p id="book-info-all"></p>
+            -->
 
-  <!--- create Book -->
+                      </td>
+
+                    </tr>
+                    </thead>
+
+                  </table>
+                </div>
+
+
+                <div class="myBox" style="width: 50%; height: 400px; overflow-y: scroll">
+                  <h3>Get all books</h3>
+                  <button id="btn-get-all-books" type="button" class="btn btn-primary" >
+                    Get all books
+                  </button>
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <th>Book Id</th>
+                      <th>Title</th>
+                      <th>Author</th>
+                      <th>Publisher</th>
+                      <th>Publish Year</th>
+                      <th>ISBN#</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbl-id-book"></tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!--- create Book -->
   <div class="container">
     <div class="row mt-3">
       <div class="col md-6">
@@ -216,8 +252,8 @@
             <input type="text" class="form-control" id="title">
           </div>
           <div class="form-group">
-            <label for="author">Author</label>
-            <input type="text" class="form-control" id="author">
+            <label for="authors">Author</label>
+            <input type="text" class="form-control" id="authors">
           </div>
 
           <div class="form-group">

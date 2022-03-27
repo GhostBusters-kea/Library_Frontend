@@ -1,1 +1,1 @@
-export const SERVER = "https://kealibrary.azurewebsites.net/api/"
+//export const SERVER = "https://kealibrary.azurewebsites.net/api/"

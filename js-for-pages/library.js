@@ -1,7 +1,7 @@
 // https://localhost:8080/api/libraries
 
-import { SERVER } from "../settings.js"
-const URL = SERVER + "libraries/"
+//import { SERVER } from "../settings.js"
+const URL = "https://kealibrary.azurewebsites.net/api/libraries/"
 
 
 
