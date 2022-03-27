@@ -86,7 +86,7 @@ export function deleteLoan(){
 
 
         if (deleteButtonPressed) {
-            fetch("http://localhost:8080/api/loan/" + id, {
+            fetch(URL + id, {
                 method: "DELETE",
             })
                 .then(res => res.json())
@@ -103,7 +103,7 @@ export function deleteLoan(){
         const btn = document.querySelector(".btn-buttom")
         btn.addEventListener("click", (e)=>{
             e.preventDefault()
-            fetch("http://localhost:8080/api/loan/" + id, {
+            fetch(URL + id, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
