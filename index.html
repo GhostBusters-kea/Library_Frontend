@@ -337,11 +337,35 @@
 <!-- sign up page -->
 </template>
 <template data-id="signup-page">
-  <h2>Sign up page</h2>
-  <div class="container">
+  <h2>Member Page</h2>
+<div class="container" style="display: flex">
+
+  <div class="myBox" style="width: 50%; margin: 5px; height: 400px; overflow-y: scroll">
+    <h3>Get all member</h3>
+    <button id="btn-get-all-members" type="button" class="btn btn-primary" >
+      Get all members
+    </button>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>zip</th>
+      </tr>
+      </thead>
+      <tbody id="allUsers"></tbody>
+    </table>
+  </div>
+
+
+  <div class="myBox" style="width: 50%; margin: 5px; height: 400px; overflow-y: scroll">
     <div class="row mt-3">
       <div class="col md-6">
-        <h3>Create new user</h3>
+        <h3>Create new member</h3>
         <form class="add-user-form">
           <div class="form-group">
             <label for="first-name">First Name</label>
@@ -367,10 +391,11 @@
             <input type="text" class="form-control" id="zip">
           </div>
           <br>
-          <button type="submit" class="btn btn-primary">Create user</button>
+          <button id="btn-createNemUser" type="submit" class="btn btn-primary">Create user</button>
         </form>
       </div>
     </div>
   </div>
+</div>
 </template>
 
